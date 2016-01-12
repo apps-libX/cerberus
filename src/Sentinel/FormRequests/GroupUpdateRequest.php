@@ -4,6 +4,7 @@
  * Modified from https://github.com/rydurham/Sentinel
  * by anonymous on 13/01/16 1:42.
  */
+
 namespace Cerberus\FormRequests;
 
 use Illuminate\Foundation\Http\FormRequest;
