@@ -1,12 +1,12 @@
 <?php
 
-namespace Cerberus;
-
 /**
  * SentryServiceProvider.php
  * Modified from https://github.com/rydurham/Sentinel
  * by anonymous on 12/01/16 22:31.
  */
+
+namespace Cerberus;
 
 /**
  * Modified from the Original Sentry Service Provider. This version pulls
