@@ -1,5 +1,4 @@
 <?php
-
 /**
  * CerberusServiceProvider.php
  * Modified from https://github.com/rydurham/Sentinel
