@@ -1,0 +1,45 @@
+{
+  "name"             : "onderdelen/cerberus",
+  "description"      : "Description Cerberus",
+  "keywords"         : [
+    "onderdelen",
+    "cerberus"
+  ],
+  "homepage"         : "https://github.com/onderdelen/cerberus",
+  "license"          : "MIT",
+  "authors"          : [
+    {
+      "name"    : "anonymoussc",
+      "email"   : "https://github.com/onderdelen",
+      "homepage": "50c5ac69@opayq.com",
+      "role"    : "Developer"
+    }
+  ],
+  "require"          : {
+    "php"                 : ">=5.5.9",
+    "illuminate/support"  : "5.1.*@dev",
+    "illuminate/contracts": "5.1.*@dev"
+  },
+  "require-dev"      : {
+    "fzaninotto/faker": "~1.4",
+    "mockery/mockery" : "0.9.*",
+    "phpunit/phpunit" : "~4.0",
+    "phpspec/phpspec" : "~2.1"
+  },
+  "autoload"         : {
+    "classmap": [
+      "src/seeds",
+      "src/controllers",
+      "tests"
+    ],
+    "psr-4"   : {
+      "Onderdelen\\Cerberus\\": "src"
+    }
+  },
+  "autoload-dev"     : {
+    "psr-4": {
+      "Onderdelen\\Cerberus\\Test\\": "tests"
+    }
+  },
+  "minimum-stability": "stable"
+}
