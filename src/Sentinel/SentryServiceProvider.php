@@ -1,5 +1,4 @@
 <?php
-
 /**
  * SentryServiceProvider.php
  * Modified from https://github.com/rydurham/Sentinel
