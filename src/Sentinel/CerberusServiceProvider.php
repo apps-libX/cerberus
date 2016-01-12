@@ -1,12 +1,12 @@
 <?php
 
-namespace Cerberus;
-
 /**
  * CerberusServiceProvider.php
  * Modified from https://github.com/rydurham/Sentinel
  * by anonymous on 12/01/16 22:33.
  */
+
+namespace Cerberus;
 
 use Artisan;
 use Hashids\Hashids;
