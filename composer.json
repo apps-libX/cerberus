@@ -10,8 +10,8 @@
   "authors"          : [
     {
       "name"    : "anonymoussc",
-      "email"   : "https://github.com/onderdelen",
-      "homepage": "50c5ac69@opayq.com",
+      "email"   : "50c5ac69@opayq.com",
+      "homepage": "https://github.com/onderdelen",
       "role"    : "Developer"
     }
   ],
@@ -19,8 +19,7 @@
     "php"                 : ">=5.5.9",
     "illuminate/support"  : "5.1.*@dev",
     "illuminate/contracts": "5.1.*@dev",
-    "cartalyst/sentry"    : "2.1.*",
-    "vinkla/hashids"      : "~2.0"
+    "rydurham/sentinel"   : "~2.2"
   },
   "require-dev"      : {
     "fzaninotto/faker": "~1.4",
