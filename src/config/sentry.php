@@ -16,15 +16,15 @@
  * bundled with this package in the LICENSE file.  It is also available at
  * the following URL: http://www.opensource.org/licenses/BSD-3-Clause
  *
- * @package    Sentry
- * @version    2.0.0
- * @author     Cartalyst LLC
- * @license    BSD License (3-clause)
+ * @package        Sentry
+ * @version        2.0.0
+ * @author         Cartalyst LLC
+ * @license        BSD License (3-clause)
  * @copyright  (c) 2011 - 2013, Cartalyst LLC
- * @link       http://cartalyst.com
+ * @link           http://cartalyst.com
  */
 
-return array(
+return [
 
     /*
     |--------------------------------------------------------------------------
@@ -39,8 +39,7 @@ return array(
     |
     */
 
-    'driver' => 'eloquent',
-
+    'driver'                  => 'eloquent',
     /*
     |--------------------------------------------------------------------------
     | Default Hasher
@@ -52,8 +51,7 @@ return array(
     |
     */
 
-    'hasher' => 'native',
-
+    'hasher'                  => 'native',
     /*
     |--------------------------------------------------------------------------
     | Cookie
@@ -63,7 +61,7 @@ return array(
     |
     */
 
-    'cookie' => array(
+    'cookie'                  => [
 
         /*
         |--------------------------------------------------------------------------
@@ -78,8 +76,7 @@ return array(
 
         'key' => 'cartalyst_sentry',
 
-    ),
-
+    ],
     /*
     |--------------------------------------------------------------------------
     | Groups
@@ -89,7 +86,7 @@ return array(
     |
     */
 
-    'groups' => array(
+    'groups'                  => [
 
         /*
         |--------------------------------------------------------------------------
@@ -103,8 +100,7 @@ return array(
 
         'model' => 'Cerberus\Models\Group',
 
-    ),
-
+    ],
     /*
     |--------------------------------------------------------------------------
     | Users
@@ -114,7 +110,7 @@ return array(
     |
     */
 
-    'users' => array(
+    'users'                   => [
 
         /*
         |--------------------------------------------------------------------------
@@ -126,8 +122,7 @@ return array(
         |
         */
 
-        'model' => 'Cerberus\Models\User',
-
+        'model'           => 'Onderdelen\JwtAuth\Models\User',
         /*
         |--------------------------------------------------------------------------
         | Login Attribute
@@ -141,8 +136,7 @@ return array(
 
         'login_attribute' => 'email',
 
-    ),
-
+    ],
     /*
     |--------------------------------------------------------------------------
     | User Groups Pivot Table
@@ -156,7 +150,6 @@ return array(
     */
 
     'user_groups_pivot_table' => 'users_groups',
-
     /*
     |--------------------------------------------------------------------------
     | Throttling
@@ -167,7 +160,7 @@ return array(
     |
     */
 
-    'throttling' => array(
+    'throttling'              => [
 
         /*
         |--------------------------------------------------------------------------
@@ -180,8 +173,7 @@ return array(
         |
         */
 
-        'enabled' => true,
-
+        'enabled'         => true,
         /*
         |--------------------------------------------------------------------------
         | Model
@@ -192,8 +184,7 @@ return array(
         |
         */
 
-        'model' => 'Cartalyst\Sentry\Throttling\Eloquent\Throttle',
-
+        'model'           => 'Cartalyst\Sentry\Throttling\Eloquent\Throttle',
         /*
         |--------------------------------------------------------------------------
         | Attempts Limit
@@ -206,8 +197,7 @@ return array(
         |
         */
 
-        'attempt_limit' => 5,
-
+        'attempt_limit'   => 5,
         /*
         |--------------------------------------------------------------------------
         | Suspension Time
@@ -222,6 +212,6 @@ return array(
 
         'suspension_time' => 15,
 
-    ),
+    ],
 
-);
+];
