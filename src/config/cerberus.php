@@ -17,8 +17,7 @@ return [
     |
     */
 
-    'registration' => true,
-
+    'registration'              => true,
     /*
     |--------------------------------------------------------------------------
     | Activation
@@ -29,8 +28,7 @@ return [
     |
     */
 
-    'require_activation' => true,
-
+    'require_activation'        => false,
     /*
     |--------------------------------------------------------------------------
     | Allow Usernames
@@ -42,8 +40,7 @@ return [
     |
     */
 
-    'allow_usernames' => true,
-
+    'allow_usernames'           => true,
     /*
     |--------------------------------------------------------------------------
     | Default User Groups
@@ -54,8 +51,7 @@ return [
     |
     */
 
-    'default_user_groups' => ['Users'],
-
+    'default_user_groups'       => ['Users'],
     /*
     |--------------------------------------------------------------------------
     | Default Group Permissions
@@ -66,8 +62,7 @@ return [
     |
     */
 
-    'default_permissions' => ['admin', 'users'],
-
+    'default_permissions'       => ['admin', 'users'],
     /*
     |--------------------------------------------------------------------------
     | Custom User Fields
@@ -79,11 +74,10 @@ return [
     |
     */
 
-    'additional_user_fields' => [
+    'additional_user_fields'    => [
         'first_name' => 'alpha_spaces',
-        'last_name'  => 'alpha_spaces'
+        'last_name'  => 'alpha_spaces',
     ],
-
     /*
     |--------------------------------------------------------------------------
     | E-Mail Subject Lines
@@ -95,11 +89,10 @@ return [
     |
     */
 
-    'subjects' => [
+    'subjects'                  => [
         'welcome'        => 'Account Registration Confirmation',
-        'reset_password' => 'Password Reset Confirmation'
+        'reset_password' => 'Password Reset Confirmation',
     ],
-
     /*
     |--------------------------------------------------------------------------
     | Default Routing
@@ -110,8 +103,7 @@ return [
     |
     */
 
-    'routes_enabled' => true,
-
+    'routes_enabled'            => false,
     /*
     |--------------------------------------------------------------------------
     | URL Redirection for Method Completion
@@ -123,7 +115,7 @@ return [
     |
     */
 
-    'routing' => [
+    'routing'                   => [
         'session_store'                => ['route' => 'home'],
         'session_destroy'              => ['action' => '\\Cerberus\Controllers\SessionController@create'],
         'registration_complete'        => ['route' => 'home'],
@@ -148,7 +140,6 @@ return [
         'profile_change_password'      => ['route' => 'cerberus.profile.show'],
         'profile_update'               => ['route' => 'cerberus.profile.show'],
     ],
-
     /*
     |--------------------------------------------------------------------------
     | Guest Middleware Redirection
@@ -161,7 +152,6 @@ return [
     */
 
     'redirect_if_authenticated' => 'home',
-
     /*
     |--------------------------------------------------------------------------
     | Enable HTML Views
@@ -173,8 +163,7 @@ return [
     |
     */
 
-    'views_enabled' => true,
-
+    'views_enabled'             => false,
     /*
     |--------------------------------------------------------------------------
     | Master Layout
@@ -185,8 +174,7 @@ return [
     |
     */
 
-    'layout' => 'Cerberus::layouts.default',
-
+    'layout'                    => 'Cerberus::layouts.default',
     /*
     |--------------------------------------------------------------------------
     | Email Views
@@ -196,11 +184,11 @@ return [
     |
     */
 
-    'emails' => [
+    'emails'                    => [
         'views' => [
             'welcome' => 'Cerberus::emails.welcome',
-            'reset' => 'Cerberus::emails.reset'
-        ]
-    ]
+            'reset'   => 'Cerberus::emails.reset',
+        ],
+    ],
 
 ];
