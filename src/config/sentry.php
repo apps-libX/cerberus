@@ -122,7 +122,7 @@ return [
         |
         */
 
-        'model'           => 'Onderdelen\JwtAuth\Models\User',
+        'model'           => 'Cerberus\Models\User',
         /*
         |--------------------------------------------------------------------------
         | Login Attribute
