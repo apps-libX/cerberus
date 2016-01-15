@@ -103,7 +103,7 @@ return [
     |
     */
 
-    'routes_enabled'            => false,
+    'routes_enabled'            => true,
     /*
     |--------------------------------------------------------------------------
     | URL Redirection for Method Completion
