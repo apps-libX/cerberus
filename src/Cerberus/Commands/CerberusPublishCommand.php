@@ -262,7 +262,7 @@ class CerberusPublishCommand extends Command
     {
         // Prepare for copying files
         $source      = $this->packagePath . '/../../public/' . $theme;
-        $destination = $this->appPath . '/../public/packages/onderdelen/cerberus';
+        $destination = $this->appPath . '/../public/packages/einherjars/cerberus';
 
         // If there are already assets published, confirm that we want to overwrite.
         if ($this->file->isDirectory($destination)) {

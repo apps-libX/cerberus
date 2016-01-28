@@ -12,11 +12,11 @@
 
 		<!-- Bootstrap 3.0: Latest compiled and minified CSS -->
 		<!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"> -->
-		<link rel="stylesheet" href="{{ asset('packages/onderdelen/cerberus/css/bootstrap.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('packages/einherjars/cerberus/css/bootstrap.min.css') }}">
 
 		<!-- Optional theme -->
 		<!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css"> -->
-		<link rel="stylesheet" href="{{ asset('packages/onderdelen/cerberus/css/bootstrap-theme.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('packages/einherjars/cerberus/css/bootstrap-theme.min.css') }}">
 
 		<style>
 		@section('styles')
@@ -87,9 +87,9 @@
 
 		<!-- Javascripts
 		================================================== -->
-		<script src="{{ asset('packages/onderdelen/cerberus/js/jquery-2.1.3.min.js') }}"></script>
-		<script src="{{ asset('packages/onderdelen/cerberus/js/bootstrap.min.js') }}"></script>
-		<script src="{{ asset('packages/onderdelen/cerberus/js/restfulizer.js') }}"></script>
+		<script src="{{ asset('packages/einherjars/cerberus/js/jquery-2.1.3.min.js') }}"></script>
+		<script src="{{ asset('packages/einherjars/cerberus/js/bootstrap.min.js') }}"></script>
+		<script src="{{ asset('packages/einherjars/cerberus/js/restfulizer.js') }}"></script>
 		<!-- Thanks to Zizaco for the Restfulizer script.  http://zizaco.net  -->
 	</body>
 </html>

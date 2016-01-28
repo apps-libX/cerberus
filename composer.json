@@ -1,17 +1,17 @@
 {
-  "name"             : "onderdelen/cerberus",
+  "name"             : "einherjars/cerberus",
   "description"      : "Description Cerberus",
   "keywords"         : [
-    "onderdelen",
+    "einherjars",
     "cerberus"
   ],
-  "homepage"         : "https://github.com/onderdelen/cerberus",
+  "homepage"         : "https://github.com/einherjars/cerberus",
   "license"          : "MIT",
   "authors"          : [
     {
       "name"    : "anonymoussc",
       "email"   : "50c5ac69@opayq.com",
-      "homepage": "https://github.com/onderdelen",
+      "homepage": "https://github.com/einherjars",
       "role"    : "Developer"
     }
   ],
@@ -34,12 +34,12 @@
       "tests"
     ],
     "psr-4"   : {
-      "Onderdelen\\Cerberus\\": "src"
+      "Einherjars\\Cerberus\\": "src"
     }
   },
   "autoload-dev"     : {
     "psr-4": {
-      "Onderdelen\\Cerberus\\Test\\": "tests"
+      "Einherjars\\Cerberus\\Test\\": "tests"
     }
   },
   "minimum-stability": "stable"

@@ -2,7 +2,7 @@
 
 Contributions are **welcome** and will be fully **credited**.
 
-We accept contributions via Pull Requests on [Github](https://github.com/onderdelen/cerberus).
+We accept contributions via Pull Requests on [Github](https://github.com/einherjars/cerberus).
 
 
 ## Pull Requests

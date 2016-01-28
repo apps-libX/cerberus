@@ -62,8 +62,8 @@
 
 		<!-- Javascripts
 		================================================== -->
-		<script src="{{ asset('packages/onderdelen/cerberus/js/jquery-2.1.3.min.js') }}"></script>
-		<script src="{{ asset('packages/onderdelen/cerberus/js/restfulizer.js') }}"></script>
+		<script src="{{ asset('packages/einherjars/cerberus/js/jquery-2.1.3.min.js') }}"></script>
+		<script src="{{ asset('packages/einherjars/cerberus/js/restfulizer.js') }}"></script>
 		<!-- Thanks to Zizaco for the Restfulizer script.  http://zizaco.net  -->
 	</body>
 </html>

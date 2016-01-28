@@ -9,11 +9,11 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<link rel="stylesheet" href="{{ asset('packages/onderdelen/cerberus/css/gumby.css') }}">
-		<link rel="stylesheet" href="{{ asset('packages/onderdelen/cerberus/css/style.css') }}">
+		<link rel="stylesheet" href="{{ asset('packages/einherjars/cerberus/css/gumby.css') }}">
+		<link rel="stylesheet" href="{{ asset('packages/einherjars/cerberus/css/style.css') }}">
 
 		<!-- Modernizr -->
-		<script src="{{ asset('packages/onderdelen/cerberus/js/vendor/modernizr-2.6.2.min.js') }}"></script>
+		<script src="{{ asset('packages/einherjars/cerberus/js/vendor/modernizr-2.6.2.min.js') }}"></script>
 
 	</head>
 
@@ -27,7 +27,7 @@
 		      	<a class="toggle" gumby-trigger="#nav1 > ul" href="#"><i class="icon-menu"></i></a>
 		        <h1 class="four columns logo">
 		          <a href="#">
-		            <img src="packages/onderdelen/cerberus/img/gumby_mainlogo.png" gumby-retina />
+		            <img src="packages/einherjars/cerberus/img/gumby_mainlogo.png" gumby-retina />
 		          </a>
 		        </h1>
 
@@ -64,9 +64,9 @@
 
 		<!-- Javascripts
 		================================================== -->
-		<script src="{{ asset('packages/onderdelen/cerberus/js/libs/jquery-2.0.2.min.js') }}"></script>
-		<script src="{{ asset('packages/onderdelen/cerberus/js/libs/gumby.min.js') }}"></script>
-		<script src="{{ asset('packages/onderdelen/cerberus/js/restfulizer.js') }}"></script>
+		<script src="{{ asset('packages/einherjars/cerberus/js/libs/jquery-2.0.2.min.js') }}"></script>
+		<script src="{{ asset('packages/einherjars/cerberus/js/libs/gumby.min.js') }}"></script>
+		<script src="{{ asset('packages/einherjars/cerberus/js/restfulizer.js') }}"></script>
 		<!-- Thanks to Zizaco for the Restfulizer script.  http://zizaco.net  -->
 	</body>
 </html>

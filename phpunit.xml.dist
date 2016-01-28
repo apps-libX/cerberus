@@ -10,7 +10,7 @@
          processIsolation="false"
          stopOnFailure="false">
     <testsuites>
-        <testsuite name="onderdelen Test Suite">
+        <testsuite name="Cerberus Test Suite">
             <directory>tests</directory>
         </testsuite>
     </testsuites>

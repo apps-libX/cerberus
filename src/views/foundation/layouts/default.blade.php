@@ -11,10 +11,10 @@
 	</title>
 
 	<!-- If you are using CSS version, only link these 2 files, you may add app.css to use for your overrides if you like. -->
-	<link rel="stylesheet" href="{{ asset('packages/onderdelen/cerberus/css/normalize.css') }}">
-	<link rel="stylesheet" href="{{ asset('packages/onderdelen/cerberus/css/foundation.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('packages/einherjars/cerberus/css/normalize.css') }}">
+	<link rel="stylesheet" href="{{ asset('packages/einherjars/cerberus/css/foundation.min.css') }}">
 
-	<script src="{{ asset('packages/onderdelen/cerberus/js/modernizr.js') }}"></script>
+	<script src="{{ asset('packages/einherjars/cerberus/js/modernizr.js') }}"></script>
 
 </head>
 <body>
@@ -69,9 +69,9 @@
 	@yield('content')
 	<!-- ./ content -->
 
-	<script src="{{ asset('packages/onderdelen/cerberus/js/jquery.js') }}"></script>
-	<script src="{{ asset('packages/onderdelen/cerberus/js/foundation.min.js') }}"></script>
-	<script src="{{ asset('packages/onderdelen/cerberus/js/restfulizer.js') }}"></script>
+	<script src="{{ asset('packages/einherjars/cerberus/js/jquery.js') }}"></script>
+	<script src="{{ asset('packages/einherjars/cerberus/js/foundation.min.js') }}"></script>
+	<script src="{{ asset('packages/einherjars/cerberus/js/restfulizer.js') }}"></script>
 	<!-- Thanks to Zizaco for the Restfulizer script.  http://zizaco.net  -->
 	<script>
 		$(document).foundation();
