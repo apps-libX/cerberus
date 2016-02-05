@@ -30,7 +30,7 @@ return array(
 
     'helloworld'    => "Hello World!",
 
-    'description'    => "To je příklad <a href=\"https://github.com/laravel/laravel\"> Laravel 5.1</a> systému s modulem <a href=\"https://github.com/cartalyst/sentry\"> Sentry 2.0</a> a <a href=\"http://getbootstrap.com/\"> Bootstrap 3.0</a>.",
+    'description'    => "To je příklad <a href=\"https://github.com/laravel/laravel\"> Laravel 5.1</a> systému s modulem <a href=\"https://github.com/einherjars/carbuncle\"> Carbuncle 2.0</a> a <a href=\"http://getbootstrap.com/\"> Bootstrap 3.0</a>.",
 
     'loginstatus'    => "Aktuálně jste přihlášeni.",
 

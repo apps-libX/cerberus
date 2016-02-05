@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class SentryUserSeeder extends Seeder
+class CarbuncleUserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,17 +13,17 @@ class SentryUserSeeder extends Seeder
     {
         DB::table('users')->delete();
 
-        Sentry::getUserProvider()->create(array(
+        Carbuncle::getUserProvider()->create(array(
             'email'    => 'admin@admin.com',
             'username' => 'admin',
-            'password' => 'sentryadmin',
+            'password' => 'carbuncleadmin',
             'activated' => 1,
         ));
 
-        Sentry::getUserProvider()->create(array(
+        Carbuncle::getUserProvider()->create(array(
             'email'    => 'user@user.com',
             'username' => '',
-            'password' => 'sentryuser',
+            'password' => 'carbuncleuser',
             'activated' => 1,
         ));
     }

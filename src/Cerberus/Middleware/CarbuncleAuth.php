@@ -1,6 +1,6 @@
 <?php
 /**
- * SentryGuest.php
+ * CarbuncleAuth.php
  * Modified from https://github.com/rydurham/Sentinel
  * by anonymous on 13/01/16 1:37.
  */
@@ -8,9 +8,9 @@
 namespace Cerberus\Middleware;
 
 use Closure;
-use Sentry;
+use Carbuncle;
 
-class SentryGuest
+class CarbuncleAuth
 {
     /**
      * Handle an incoming request.
@@ -21,9 +21,13 @@ class SentryGuest
      */
     public function handle($request, Closure $next)
     {
-        if (Sentry::check()) {
-            $destination = config('cerberus.redirect_if_authenticated', 'home');
-            return redirect()->route($destination);
+        if (!Carbuncle::check()) {
+            if ($request->ajax()) {
+                return response('Unauthorized.', 401);
+            } else {
+                $request->session()->reflash();
+                return redirect()->guest(route('cerberus.login'));
+            }
         }
 
         return $next($request);

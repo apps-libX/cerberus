@@ -1,30 +1,29 @@
 <?php
 /**
- * SentryAdminAccess.php
+ * CarbuncleMember.php
  * Modified from https://github.com/rydurham/Sentinel
- * by anonymous on 13/01/16 1:37.
+ * by anonymous on 13/01/16 1:38.
  */
 
 namespace Cerberus\Middleware;
 
 use Closure;
+use Carbuncle;
 use Session;
-use Sentry;
-use Illuminate\Contracts\Routing\Middleware;
 
-class SentryAdminAccess
+class CarbuncleMember
 {
     /**
      * Handle an incoming request.
      *
      * @param  \Illuminate\Http\Request $request
      * @param  \Closure $next
+     * @param string $group
      * @return mixed
      */
-    public function handle($request, Closure $next)
+    public function handle($request, Closure $next, $group)
     {
-        // First make sure there is an active session
-        if (!Sentry::check()) {
+        if (!Carbuncle::check()) {
             if ($request->ajax()) {
                 return response('Unauthorized.', 401);
             } else {
@@ -32,8 +31,11 @@ class SentryAdminAccess
             }
         }
 
-        // Now check to see if the current user has the 'admin' permission
-        if (!Sentry::getUser()->hasAccess('admin')) {
+        // Find the specified group
+        $group = Carbuncle::findGroupByName($group);
+
+        // Now check to see if the current user is a member of the specified group
+        if (!Carbuncle::getUser()->inGroup($group)) {
             if ($request->ajax()) {
                 return response('Unauthorized.', 401);
             } else {
@@ -43,7 +45,6 @@ class SentryAdminAccess
             }
         }
 
-        // All clear - we are good to move forward
         return $next($request);
     }
 }

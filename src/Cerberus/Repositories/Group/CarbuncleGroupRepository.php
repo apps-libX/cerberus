@@ -1,34 +1,34 @@
 <?php
 /**
- * SentryGroupRepository.php
+ * CarbuncleGroupRepository.php
  * Modified from https://github.com/rydurham/Sentinel
  * by anonymous on 13/01/16 1:28.
  */
 
 namespace Cerberus\Repositories\Group;
 
-use Cartalyst\Sentry\Sentry;
+use Einherjars\Carbuncle\Carbuncle;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Events\Dispatcher;
 use Illuminate\Http\Response;
-use Cartalyst\Sentry\Groups\GroupExistsException;
-use Cartalyst\Sentry\Groups\GroupNotFoundException;
+use Einherjars\Carbuncle\Groups\GroupExistsException;
+use Einherjars\Carbuncle\Groups\GroupNotFoundException;
 use Cerberus\Models\Group;
 use Cerberus\DataTransferObjects\BaseResponse;
 use Cerberus\DataTransferObjects\SuccessResponse;
 use Cerberus\DataTransferObjects\FailureResponse;
 use Cerberus\DataTransferObjects\ExceptionResponse;
 
-class SentryGroupRepository implements CerberusGroupRepositoryInterface
+class CarbuncleGroupRepository implements CerberusGroupRepositoryInterface
 {
-    protected $sentry;
+    protected $carbuncle;
 
     /**
      * Constructor
      */
-    public function __construct(Sentry $sentry, Dispatcher $dispatcher)
+    public function __construct(Carbuncle $carbuncle, Dispatcher $dispatcher)
     {
-        $this->sentry     = $sentry;
+        $this->carbuncle     = $carbuncle;
         $this->dispatcher = $dispatcher;
     }
 
@@ -44,7 +44,7 @@ class SentryGroupRepository implements CerberusGroupRepositoryInterface
             $permissions = (isset($data['permissions']) ? $data['permissions'] : []);
 
             /// Create the group
-            $group = $this->sentry->createGroup([
+            $group = $this->carbuncle->createGroup([
                 'name' => e($data['name']),
                 'permissions' => $permissions,
             ]);
@@ -73,7 +73,7 @@ class SentryGroupRepository implements CerberusGroupRepositoryInterface
             $permissions = (isset($data['permissions']) ? $data['permissions'] : []);
 
             // Find the group using the group id
-            $group = $this->sentry->findGroupById($data['id']);
+            $group = $this->carbuncle->findGroupById($data['id']);
 
             // Grab the current (pre-edit) permissions and nullify appropriately
             $existingPermissions = $group->getPermissions();
@@ -118,7 +118,7 @@ class SentryGroupRepository implements CerberusGroupRepositoryInterface
     {
         try {
             // Find the group using the group id
-            $group = $this->sentry->findGroupById($id);
+            $group = $this->carbuncle->findGroupById($id);
 
             // Delete the group
             $group->delete();
@@ -142,7 +142,7 @@ class SentryGroupRepository implements CerberusGroupRepositoryInterface
      */
     public function retrieveById($id)
     {
-        return $this->sentry->findGroupById($id);
+        return $this->carbuncle->findGroupById($id);
     }
 
     /**
@@ -153,7 +153,7 @@ class SentryGroupRepository implements CerberusGroupRepositoryInterface
      */
     public function retrieveByName($name)
     {
-        return $this->sentry->findGroupByName($name);
+        return $this->carbuncle->findGroupByName($name);
     }
 
     /**
@@ -163,6 +163,6 @@ class SentryGroupRepository implements CerberusGroupRepositoryInterface
      */
     public function all()
     {
-        return $this->sentry->getGroupProvider()->findAll();
+        return $this->carbuncle->getGroupProvider()->findAll();
     }
 }

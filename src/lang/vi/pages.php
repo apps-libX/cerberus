@@ -30,7 +30,7 @@ return array(
 
     'helloworld'    => "Chào thế giới!",
 
-    'description'    => "Đây là một ví dụ của <a href=\"https://github.com/laravel/laravel\"> Laravel 4.1</a> chạy với <a href=\"https://github.com/cartalyst/sentry\"> Sentry 2.0</a> và <a href=\"http://getbootstrap.com/\"> Bootstrap 3.0</a>.",
+    'description'    => "Đây là một ví dụ của <a href=\"https://github.com/laravel/laravel\"> Laravel 4.1</a> chạy với <a href=\"https://github.com/einherjars/carbuncle\"> Carbuncle 2.0</a> và <a href=\"http://getbootstrap.com/\"> Bootstrap 3.0</a>.",
 
     'loginstatus'    => "Bạn hiện đang đăng nhập.",
 

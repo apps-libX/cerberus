@@ -14,8 +14,8 @@ class CerberusDatabaseSeeder extends Seeder
         \Eloquent::unguard();
 
         // $this->call('UserTableSeeder');
-        $this->call('SentryGroupSeeder');
-        $this->call('SentryUserSeeder');
-        $this->call('SentryUserGroupSeeder');
+        $this->call('CarbuncleGroupSeeder');
+        $this->call('CarbuncleUserSeeder');
+        $this->call('CarbuncleUserGroupSeeder');
     }
 }

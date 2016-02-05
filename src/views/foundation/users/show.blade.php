@@ -12,7 +12,7 @@ Home
 
 	<?php
 	    // Determine the edit profile route
-	    if (($user->email == Sentry::getUser()->email)) {
+	    if (($user->email == Carbuncle::getUser()->email)) {
 	        $editAction = route('cerberus.profile.edit');
 	    } else {
 	        $editAction =  action('\\Cerberus\Controllers\UserController@edit', [$user->hash]);

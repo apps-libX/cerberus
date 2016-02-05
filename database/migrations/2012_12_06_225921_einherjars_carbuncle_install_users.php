@@ -1,6 +1,6 @@
 <?php
 /**
- * Part of the Sentry package.
+ * Part of the Carbuncle package.
  *
  * NOTICE OF LICENSE
  *
@@ -10,17 +10,17 @@
  * bundled with this package in the LICENSE file.  It is also available at
  * the following URL: http://www.opensource.org/licenses/BSD-3-Clause
  *
- * @package    Sentry
+ * @package    Carbuncle
  * @version    2.0.0
- * @author     Cartalyst LLC
+ * @author     Einherjars LLC
  * @license    BSD License (3-clause)
- * @copyright  (c) 2011 - 2013, Cartalyst LLC
- * @link       http://cartalyst.com
+ * @copyright  (c) 2011 - 2013, Einherjars LLC
+ * @link       http://einherjars.com
  */
 
 use Illuminate\Database\Migrations\Migration;
 
-class CartalystSentryInstallUsers extends Migration
+class EinherjarsCarbuncleInstallUsers extends Migration
 {
     /**
      * Run the migrations.

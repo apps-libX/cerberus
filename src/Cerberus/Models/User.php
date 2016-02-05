@@ -10,15 +10,15 @@ namespace Cerberus\Models;
 use Hashids;
 use Illuminate\Contracts\Auth\Authenticatable as UserContract;
 
-class User extends \Cartalyst\Sentry\Users\Eloquent\User implements UserContract
+class User extends \Einherjars\Carbuncle\Users\Eloquent\User implements UserContract
 {
     /**
-     * Set the Sentry User Model Hasher to be the same as the configured Sentry Hasher
+     * Set the Carbuncle User Model Hasher to be the same as the configured Carbuncle Hasher
      */
     public static function boot()
     {
         parent::boot();
-        static::setHasher(app()->make('sentry.hasher'));
+        static::setHasher(app()->make('carbuncle.hasher'));
     }
 
     /**

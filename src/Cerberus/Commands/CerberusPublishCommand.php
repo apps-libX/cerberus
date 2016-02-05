@@ -115,7 +115,7 @@ class CerberusPublishCommand extends Command
         $this->publishCerberusConfig();
 
         // Publish the Cerberus Config
-        $this->publishSentryConfig();
+        $this->publishCarbuncleConfig();
 
         // Publish the Mitch/Hashids config files
         $this->publishHashidsConfig();
@@ -178,17 +178,17 @@ class CerberusPublishCommand extends Command
     }
 
     /**
-     * Publish the Sentry Config file
+     * Publish the Carbuncle Config file
      */
-    private function publishSentryConfig()
+    private function publishCarbuncleConfig()
     {
         // Prepare for copying
-        $source      = realpath($this->packagePath . '/../config/sentry.php');
-        $destination = base_path() . '/config/sentry.php';
+        $source      = realpath($this->packagePath . '/../config/carbuncle.php');
+        $destination = base_path() . '/config/carbuncle.php';
 
         // If this file has already been published, confirm that we want to overwrite.
         if ($this->file->isFile($destination)) {
-            $answer = $this->confirm('Sentry config has already been published. Do you want to overwrite?');
+            $answer = $this->confirm('Carbuncle config has already been published. Do you want to overwrite?');
 
             if (!$answer) {
                 return;
@@ -199,7 +199,7 @@ class CerberusPublishCommand extends Command
         $this->file->copy($source, $destination);
 
         // Notify action completion
-        $this->info('Sentry configuration file published.');
+        $this->info('Carbuncle configuration file published.');
     }
 
 

@@ -32,15 +32,15 @@
 		        </h1>
 
 		        <ul class="eight columns">
-		           @if ( ! Sentry::check() )
+		           @if ( ! Carbuncle::check() )
        					<li {!! (Request::is('login') ? 'class="active"' : '') !!}><a href="{{ route('cerberus.login') }}">Log In</a></li>
        					<li {!! (Request::is('register') ? 'class="active"' : '') !!}><a href="{{ route('cerberus.register.form') }}">Register</a></li>
        				@else 
-       					@if (Sentry::getUser()->hasAccess('admin'))
+       					@if (Carbuncle::getUser()->hasAccess('admin'))
        						<li {!! (Request::is('users*') ? 'class="active"' : '') !!}><a href="{{ action('\\Cerberus\Controllers\UserController@index') }}">Users</a></li>
        						<li {!! (Request::is('groups*') ? 'class="active"' : '') !!}><a href="{{ action('\\Cerberus\Controllers\GroupController@index') }}">Groups</a></li>
        					@endif
-       					<li {!! (Request::is('profile') ? 'class="active"' : '') !!}><a href="{{ route('cerberus.profile.show') }}">{{ Sentry::getUser()->email }}</a></li>
+       					<li {!! (Request::is('profile') ? 'class="active"' : '') !!}><a href="{{ route('cerberus.profile.show') }}">{{ Carbuncle::getUser()->email }}</a></li>
        					<li><a href="{{ route('cerberus.logout') }}">Logout</a></li>
        				@endif 
 		        </ul>

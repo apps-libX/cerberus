@@ -30,9 +30,9 @@
 		<section class="top-bar-section">
 			<!-- Right Nav Section -->
 			<ul class="right">
-				 @if (Sentry::check())
+				 @if (Carbuncle::check())
 					<li {!! (Request::is('profile') ? 'class="active"' : '') !!}>
-						<a href="{{ route('cerberus.profile.show') }}">{{ Sentry::getUser()->email }}</a>
+						<a href="{{ route('cerberus.profile.show') }}">{{ Carbuncle::getUser()->email }}</a>
 					</li>
 					<li>
 						<a href="{{ route('cerberus.logout') }}">Logout</a>
@@ -49,7 +49,7 @@
 
 			<!-- Left Nav Section -->
 			<ul class="left">
-				@if (Sentry::check() && Sentry::getUser()->hasAccess('admin'))
+				@if (Carbuncle::check() && Carbuncle::getUser()->hasAccess('admin'))
 					<li {!! (Request::is('users*') ? 'class="active"' : '') !!}>
 						<a href="{{ action('\\Cerberus\Controllers\UserController@index') }}">Users</a>
 					</li>

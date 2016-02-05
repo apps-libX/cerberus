@@ -11,9 +11,9 @@ use Artisan;
 use Hashids\Hashids;
 use ReflectionClass;
 use Cerberus\Commands\CerberusPublishCommand;
-use Cerberus\Repositories\Session\SentrySessionRepository;
-use Cerberus\Repositories\Group\SentryGroupRepository;
-use Cerberus\Repositories\User\SentryUserRepository;
+use Cerberus\Repositories\Session\CarbuncleSessionRepository;
+use Cerberus\Repositories\Group\CarbuncleGroupRepository;
+use Cerberus\Repositories\User\CarbuncleUserRepository;
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
 
@@ -42,7 +42,7 @@ class CerberusServiceProvider extends ServiceProvider
 
         // Establish Fallback Config settings
         $this->mergeConfigFrom($cerberusPath.'/../config/cerberus.php', 'cerberus');
-        $this->mergeConfigFrom($cerberusPath.'/../config/sentry.php', 'sentry');
+        $this->mergeConfigFrom($cerberusPath.'/../config/carbuncle.php', 'carbuncle');
 
         // Establish Views Namespace
         if (is_dir(base_path() . '/resources/views/cerberus')) {
@@ -76,22 +76,22 @@ class CerberusServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        // Register the Sentry Service Provider
-        $this->app->register('Cerberus\SentryServiceProvider');
+        // Register the Carbuncle Service Provider
+        $this->app->register('Cerberus\CarbuncleServiceProvider');
 
        // Register the Vinkla/Hashids Service Provider
         $this->app->register('Vinkla\Hashids\HashidsServiceProvider');
 
-        // Load the Sentry and Hashid Facade Aliases
+        // Load the Carbuncle and Hashid Facade Aliases
         $loader = AliasLoader::getInstance();
-        $loader->alias('Sentry', 'Cartalyst\Sentry\Facades\Laravel\Sentry');
+        $loader->alias('Carbuncle', 'Einherjars\Carbuncle\Facades\Laravel\Carbuncle');
         $loader->alias('Hashids', 'Vinkla\Hashids\Facades\Hashids');
 
 
         // Bind the User Repository
         $this->app->bind('Cerberus\Repositories\User\CerberusUserRepositoryInterface', function ($app) {
-            return new SentryUserRepository(
-                $app['sentry'],
+            return new CarbuncleUserRepository(
+                $app['carbuncle'],
                 $app['config'],
                 $app['events']
             );
@@ -99,16 +99,16 @@ class CerberusServiceProvider extends ServiceProvider
 
         // Bind the Group Repository
         $this->app->bind('Cerberus\Repositories\Group\CerberusGroupRepositoryInterface', function ($app) {
-            return new SentryGroupRepository(
-                $app['sentry'],
+            return new CarbuncleGroupRepository(
+                $app['carbuncle'],
                 $app['events']
             );
         });
 
         // Bind the Session Manager
         $this->app->bind('Cerberus\Repositories\Session\CerberusSessionRepositoryInterface', function ($app) {
-            return new SentrySessionRepository(
-                $app['sentry'],
+            return new CarbuncleSessionRepository(
+                $app['carbuncle'],
                 $app['events']
             );
         });
@@ -121,7 +121,7 @@ class CerberusServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return array('auth', 'sentry');
+        return array('auth', 'carbuncle');
     }
 
     /**

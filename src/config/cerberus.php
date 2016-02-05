@@ -34,7 +34,7 @@ return [
     | Allow Usernames
     |--------------------------------------------------------------------------
     |
-    | By default, Sentry (and Cerberus) will only let a user log in using their
+    | By default, Carbuncle (and Cerberus) will only let a user log in using their
     | email address.  By setting 'allow_usernames' to true, a user can enter either
     | their username or their email address as a login credential.
     |
@@ -145,7 +145,7 @@ return [
     | Guest Middleware Redirection
     |--------------------------------------------------------------------------
     |
-    | The SentryGuest middleware will redirect users with active sessions to
+    | The CarbuncleGuest middleware will redirect users with active sessions to
     | the route you specify here.  If left blank, the user will be taken
     | to the home route.
     |

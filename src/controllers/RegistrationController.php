@@ -16,7 +16,7 @@ use Cerberus\Repositories\Group\CerberusGroupRepositoryInterface;
 use Cerberus\Repositories\User\CerberusUserRepositoryInterface;
 use Cerberus\Traits\CerberusRedirectionTrait;
 use Cerberus\Traits\CerberusViewfinderTrait;
-use Sentry;
+use Carbuncle;
 use View;
 use Input;
 use Event;
@@ -56,7 +56,7 @@ class RegistrationController extends BaseController
     public function registration()
     {
         // Is this user already signed in? If so redirect to the post login route
-        if (Sentry::check()) {
+        if (Carbuncle::check()) {
             return $this->redirectTo('session_store');
         }
 

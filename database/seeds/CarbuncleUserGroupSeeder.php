@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class SentryUserGroupSeeder extends Seeder
+class CarbuncleUserGroupSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,11 +13,11 @@ class SentryUserGroupSeeder extends Seeder
     {
         DB::table('users_groups')->delete();
 
-        $userUser = Sentry::getUserProvider()->findByLogin('user@user.com');
-        $adminUser = Sentry::getUserProvider()->findByLogin('admin@admin.com');
+        $userUser = Carbuncle::getUserProvider()->findByLogin('user@user.com');
+        $adminUser = Carbuncle::getUserProvider()->findByLogin('admin@admin.com');
 
-        $userGroup = Sentry::getGroupProvider()->findByName('Users');
-        $adminGroup = Sentry::getGroupProvider()->findByName('Admins');
+        $userGroup = Carbuncle::getGroupProvider()->findByName('Users');
+        $adminGroup = Carbuncle::getGroupProvider()->findByName('Admins');
 
         // Assign the groups to the users
         $userUser->addGroup($userGroup);

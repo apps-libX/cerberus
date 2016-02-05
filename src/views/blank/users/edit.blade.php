@@ -11,7 +11,7 @@ Edit Profile
 
 <?php
     // Pull the custom fields from config
-    $isProfileUpdate = ($user->email == Sentry::getUser()->email);
+    $isProfileUpdate = ($user->email == Carbuncle::getUser()->email);
     $customFields = config('cerberus.additional_user_fields');
 
     // Determine the form post route
@@ -58,7 +58,7 @@ Account</h1>
 <hr />
 @endif
 
-@if (Sentry::getUser()->hasAccess('admin') && ($user->hash != Sentry::getUser()->hash))
+@if (Carbuncle::getUser()->hasAccess('admin') && ($user->hash != Carbuncle::getUser()->hash))
 <div class="row">
     <h4>Group Memberships</h4>
     <form method="POST" action="{{ route('cerberus.users.memberships', $user->hash) }}" accept-charset="UTF-8" class="form-horizontal" role="form">
@@ -79,7 +79,7 @@ Account</h1>
 <h4>Change Password</h4>
 <form method="POST" action="{{ $passwordFormAction }}" accept-charset="UTF-8" class="form-inline" role="form">
         
-    @if(! Sentry::getUser()->hasAccess('admin'))
+    @if(! Carbuncle::getUser()->hasAccess('admin'))
     <p>
        <label for="oldPassword">Old Password</label>
        <input placeholder="Old Password" name="oldPassword" value="" id="oldPassword" type="password">

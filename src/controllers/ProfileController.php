@@ -39,7 +39,7 @@ class ProfileController extends BaseController
         $this->groupRepository = $groupRepository;
 
         // You must have an active session to proceed
-        $this->middleware('sentry.auth');
+        $this->middleware('carbuncle.auth');
     }
 
     /**

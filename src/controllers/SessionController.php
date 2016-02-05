@@ -13,7 +13,7 @@ use Cerberus\FormRequests\LoginRequest;
 use Cerberus\Repositories\Session\CerberusSessionRepositoryInterface;
 use Cerberus\Traits\CerberusRedirectionTrait;
 use Cerberus\Traits\CerberusViewfinderTrait;
-use Sentry;
+use Carbuncle;
 use View;
 use Input;
 use Event;
@@ -43,7 +43,7 @@ class SessionController extends BaseController
     public function create()
     {
         // Is this user already signed in?
-        if (Sentry::check()) {
+        if (Carbuncle::check()) {
             return $this->redirectTo('session_store');
         }
 

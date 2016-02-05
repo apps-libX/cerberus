@@ -31,7 +31,7 @@ return array(
     'helloworld'    => "مرحباً بالعالم!",
 
     'description'    => "هذا مثال عن
-<a href=\"https://github.com/laravel/laravel\">Laravel 4.1</a> مع الإضافات<a href=\"https://github.com/cartalyst/sentry\">Sentry 2.0</a> and <a href=\"http://getbootstrap.com/\">Bootstrap 3.0</a>.",
+<a href=\"https://github.com/laravel/laravel\">Laravel 4.1</a> مع الإضافات<a href=\"https://github.com/einherjars/carbuncle\">Carbuncle 2.0</a> and <a href=\"http://getbootstrap.com/\">Bootstrap 3.0</a>.",
 
     'loginstatus'    => "أنت متصل حاليا.",
 

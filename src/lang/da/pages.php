@@ -30,7 +30,7 @@ return array(
 
     'helloworld'    => "Hej Verden!",
 
-    'description'    => "Dette er et eksempel på <a href=\"https://github.com/laravel/laravel\"> Laravel 4.1</a> med <a href=\"https://github.com/cartalyst/sentry\"> Sentry 2.0</a> og <a href=\"http://getbootstrap.com/\"> Bootstrap 3.0</a>.",
+    'description'    => "Dette er et eksempel på <a href=\"https://github.com/laravel/laravel\"> Laravel 4.1</a> med <a href=\"https://github.com/einherjars/carbuncle\"> Carbuncle 2.0</a> og <a href=\"http://getbootstrap.com/\"> Bootstrap 3.0</a>.",
 
     'loginstatus'    => "Du er logget på.",
 

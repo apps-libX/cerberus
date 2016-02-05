@@ -30,7 +30,7 @@ return array(
 
     'helloworld'    => "Hola Mundo!",
 
-    'description'    => "Este es un ejemplo de <a href=\"https://github.com/laravel/laravel\"> Laravel 4.1</a> con <a href=\"https://github.com/cartalyst/sentry\"> Sentry 2.0</a> y <a href=\"http://getbootstrap.com/\">Bootstrap  3.0</a>.",
+    'description'    => "Este es un ejemplo de <a href=\"https://github.com/laravel/laravel\"> Laravel 4.1</a> con <a href=\"https://github.com/einherjars/carbuncle\"> Carbuncle 2.0</a> y <a href=\"http://getbootstrap.com/\">Bootstrap  3.0</a>.",
 
     'loginstatus'    => "Actualmente estas conectado.",
 
