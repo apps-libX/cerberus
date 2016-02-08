@@ -28,7 +28,7 @@ return [
     |
     */
 
-    'require_activation'        => false,
+    'require_activation'        => true,
     /*
     |--------------------------------------------------------------------------
     | Allow Usernames
