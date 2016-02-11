@@ -98,7 +98,7 @@ return [
         |
         */
 
-        'model' => 'Cerberus\Models\Group',
+        'model' => 'Onderdelen\JwtAuth\Models\Group',
 
     ],
     /*
@@ -122,7 +122,7 @@ return [
         |
         */
 
-        'model'           => 'Cerberus\Models\User',
+        'model'           => 'Onderdelen\JwtAuth\Models\User',
         /*
         |--------------------------------------------------------------------------
         | Login Attribute
