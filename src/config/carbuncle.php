@@ -79,7 +79,7 @@ return [
         |
         */
 
-        'model' => 'Onderdelen\JwtAuth\Models\Group',
+        'model' => 'Onderdelen\Seneschal\Models\Group',
 
     ],
     /*
@@ -103,7 +103,7 @@ return [
         |
         */
 
-        'model'           => 'Onderdelen\JwtAuth\Models\User',
+        'model'           => 'Onderdelen\Seneschal\Models\User',
         /*
         |--------------------------------------------------------------------------
         | Login Attribute
